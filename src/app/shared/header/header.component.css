@@ -1,0 +1,55 @@
+.navbar {
+    padding-left: none;
+    padding-right: none;
+    opacity: 0.8;
+    background-color:  #333;
+    border-radius: 0px;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar-brand{
+    background-color: #333;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none;   
+    color: #ff7453;    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    background:  #333;
+}
+
+li a {
+    display: block;
+    color: rgb(172, 111, 42);
+    text-align: center;
+    /* padding: 14px 16px; */
+    text-decoration: none;
+    background-color:  #333;
+}
+
+li a:hover {
+    background-color:#333;
+}
+
+/* .eslogan{
+    z-index: 2;
+} */
+
+/* .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
+    background-color: #ff4544;
+    width: 100%;
+    height: 100%;
+} */
+

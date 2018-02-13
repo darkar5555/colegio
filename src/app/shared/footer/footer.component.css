@@ -1,0 +1,28 @@
+.footer{
+    background-color: #222;
+}
+
+.logo-footer{
+    width: 100%;
+    height: auto;
+}
+
+.contactanos{
+    color: #7B8887;
+    font-size: 14px;
+}
+
+.links{
+    color:  #7b8887;
+    font-size: 14px;
+}
+
+.desarrollado{
+    background-color: black;
+    text-align: center;
+    color: #748188; 
+    padding:20px 0px 20px;
+    font-size: 14px;
+}
+
+

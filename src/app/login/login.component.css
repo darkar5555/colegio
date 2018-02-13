@@ -1,0 +1,24 @@
+.header-card{
+    background-image: url('/assets/img/login-img.jpg');
+    background-size: 100% 100%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+    opacity: 0.6;
+    background-color: #333;
+}
+
+
+
+p{
+    z-index: 4;
+}
+
+mat-card{
+    padding: 0px;
+}
+
+.login100-form{
+    align-content: center;
+    text-align: center;
+}
