@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import {
     MatToolbarModule,
     MatIconModule,
@@ -11,6 +13,11 @@ import {
     MatTableModule,
     MatListModule,
     MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatButtonToggleModule,
+    
     
 
 } from '@angular/material';
@@ -26,6 +33,11 @@ const modules = [
     MatTableModule,
     MatListModule,
     MatProgressSpinnerModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatButtonToggleModule
 ];
 
 @NgModule({

@@ -14,11 +14,24 @@ p{
     z-index: 4;
 }
 
-mat-card{
+/* mat-card{
     padding: 0px;
-}
+} */
 
 .login100-form{
     align-content: center;
     text-align: center;
+}
+
+.formulario{
+    text-align: center;
+    padding-top: 20px;
+    /* font-size: 14px; */
+}
+
+mat-icon{
+    color: steelblue;
+    font-size: 40px;
+    margin-top: 10px; 
+    margin-right: 15px;
 }

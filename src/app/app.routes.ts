@@ -10,6 +10,7 @@ import { WebComponent } from './web/web.component';
 import { HomeComponent } from './web/home/home.component';
 import { NosotrosComponent } from './web/nosotros/nosotros.component';
 import { NivelesComponent } from './web/niveles/niveles.component';
+import { RegisterComponent } from './login/register.component';
 
 
 
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
     //   ]
     // },
     { path: 'login',        component: LoginComponent},
+    { path: 'register',     component: RegisterComponent},
     { path: '**',           component: NopagefoundComponent }
     
 ];

@@ -3,46 +3,35 @@
 
       <div class="row">
 
-        <div class="col-md-offset-2 col-md-8">
+        <div class="col-md-offset-3 col-md-6">
           <mat-card>
             <mat-card-title class="header-card">
             <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
               
             </mat-card-title>
             <mat-card-content>
-                <form>
-                    <div>
-                      <span>Username</span>
-                      <input  type="text" name="username" placeholder="Enter username">
-                      <span class="focus-input100"></span>
-                    </div>
-          
-                    <div>
-                      <span >Password</span>
-                      <input  type="password" name="pass" placeholder="Enter password">
-                      <span></span>
-                    </div>
-          
-                    <div>
-                      <div>
-                        <input>
-                        <label>
-                          Remember me
-                        </label>
-                      </div>
+                <form [formGroup]="formaLogin" (ngSubmit)="logearUsuario()" class="formulario">
+                    <p>
+                        <mat-icon>account_box</mat-icon>
+                        <mat-form-field>
+                          <input matInput placeholder="Escriba el correo" formControlName="email" required>
+                          <mat-error *ngIf="formaLogin.controls['email'].invalid">{{getErrorEmailMessage()}}</mat-error>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-icon>security</mat-icon>
+                        <mat-form-field>
+                          <input matInput placeholder="Escriba la contraseña" formControlName="password" [type]="hide ? 'password' : 'text'" required>
+                        
+                          <mat-error *ngIf="formaLogin.controls['password'].invalid">La contraseña es requerida</mat-error>
+                        </mat-form-field>
+        
+                      </p>
+        
           
                       <div>
-                        <a href="#" class="txt1">
-                          Forgot Password?
-                        </a>
-                      </div>
-                    </div>
-          
-                    <div>
-                      <button mat-raised-button color="primary">
-                        Login
-                      </button>
-                    </div>
+                          <button mat-raised-button type="submit" color="primary">Ingresar</button>
+                        </div>
                   </form>
 
             </mat-card-content>

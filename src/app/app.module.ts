@@ -23,9 +23,16 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 
 import { WebModule } from './web/web.module';
-// import { HomeComponent } from './web/home/home.component';
-// import { NosotrosComponent } from './web/nosotros/nosotros.component';
-// import { NivelesComponent } from './web/niveles/niveles.component';
+import { RegisterComponent } from './login/register.component';
+
+//Formas
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
+//alertas
+import { AlertModule } from 'ngx-alerts';
+import { ServiceModule } from './services/service.module';
+
+
 
 @NgModule({
   declarations: [
@@ -35,6 +42,7 @@ import { WebModule } from './web/web.module';
     DashboardComponent,
     LoginComponent,
     NopagefoundComponent,
+    RegisterComponent,
     // WebComponent,
     // HomeComponent,
     // NosotrosComponent,
@@ -46,7 +54,11 @@ import { WebModule } from './web/web.module';
     MaterialModule,
     APP_ROUTES,
     WebModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    ReactiveFormsModule,
+    FormsModule,
+    AlertModule.forRoot({maxMessages:5, timeout:3000}),
+    ServiceModule
     
   ],
   providers: [],
