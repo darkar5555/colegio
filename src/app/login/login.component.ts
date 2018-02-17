@@ -45,12 +45,10 @@ export class LoginComponent implements OnInit {
       null
     );
     this.usuarioService.login(usuario)
-          .subscribe(resp=>{
-            console.log(resp);
-          });
+          .subscribe(correcto=> this.router.navigate(['/pages']));
   };
 
-  ingresar(){
-    this.router.navigate(['/nopagefound']);
-  };
+  // ingresar(){
+  //   this.router.navigate(['/nopagefound']);
+  // };
 }

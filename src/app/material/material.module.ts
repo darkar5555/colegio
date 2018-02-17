@@ -17,6 +17,7 @@ import {
     MatSelectModule,
     MatCheckboxModule,
     MatButtonToggleModule,
+    MatSidenavModule,
     
     
 
@@ -37,7 +38,8 @@ const modules = [
     MatFormFieldModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatSidenavModule
 ];
 
 @NgModule({

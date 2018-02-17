@@ -1,1 +1,45 @@
-<app-nopagefound> </app-nopagefound>
+<mat-toolbar color="primary" class="example-toolbar">
+        <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+        <h1 class="example-app-name">Chirvinsu Colegio</h1>
+      </mat-toolbar>
+    
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="side" opened="true"
+     fixedTopGap="0"
+    fixedBottomGap="0"
+    class="example-sidenav">
+      
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      
+      <div>hola colin de mrd</div>
+
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+  <mat-toolbar class="example-footer">Footer</mat-toolbar>
+
+
+
+
+
+
+  <!-- <mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side">
+          <p>Auto-resizing sidenav</p>
+          <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+          <button (click)="showFiller = !showFiller" mat-raised-button>
+            Toggle extra text
+          </button>
+        </mat-drawer>
+      
+        <div class="example-sidenav-content">
+          <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+          </button>
+        </div>
+      
+      </mat-drawer-container> -->

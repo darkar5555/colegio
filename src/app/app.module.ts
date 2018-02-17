@@ -15,14 +15,15 @@ import { AppComponent } from './app.component';
 //importaciones de angular material
 import 'hammerjs';
 import { MaterialModule } from './material/material.module';
-import { PagesComponent } from './pages/pages.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+// import { PagesComponent } from './pages/pages.component';
+// import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 // import { WebComponent } from './web/web.component';
 
 
 import { WebModule } from './web/web.module';
+import { PagesModule } from './pages/pages.module';
 import { RegisterComponent } from './login/register.component';
 
 //Formas
@@ -31,6 +32,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 //alertas
 import { AlertModule } from 'ngx-alerts';
 import { ServiceModule } from './services/service.module';
+import { PAGES_ROUTES } from './pages/pages.routes';
+
 
 
 
@@ -38,8 +41,8 @@ import { ServiceModule } from './services/service.module';
   declarations: [
     AppComponent,
 
-    PagesComponent,
-    DashboardComponent,
+    // PagesComponent,
+    // DashboardComponent,
     LoginComponent,
     NopagefoundComponent,
     RegisterComponent,
@@ -58,7 +61,8 @@ import { ServiceModule } from './services/service.module';
     ReactiveFormsModule,
     FormsModule,
     AlertModule.forRoot({maxMessages:5, timeout:3000}),
-    ServiceModule
+    ServiceModule,
+    PagesModule
     
   ],
   providers: [],
