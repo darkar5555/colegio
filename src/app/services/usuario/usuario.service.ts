@@ -6,11 +6,13 @@ import { URL_SERVICIOS } from '../../config/config';
 //importar el operador map
 import 'rxjs/add/operator/map';
 import { AlertService } from 'ngx-alerts';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class UsuarioService {
 
-  constructor(private http: HttpClient, private alertService: AlertService) { 
+  constructor(private http: HttpClient, private alertService: AlertService,
+              private router: Router) { 
     console.log('servicios de usuario listo');
   }
 
@@ -19,6 +21,10 @@ export class UsuarioService {
     let url = URL_SERVICIOS + '/login';
     return this.http.post(url, usuario);
   };
+
+  logOut(){
+    this.router.navigate(['']);
+  }
 
   crearUsuario( usuario: Usuario ){
     let url = URL_SERVICIOS + '/usuario';

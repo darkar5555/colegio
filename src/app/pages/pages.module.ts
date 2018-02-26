@@ -15,6 +15,7 @@ import { PagesComponent } from "./pages.component";
 
 import { PAGES_ROUTES } from "./pages.routes";
 import { RegistrarComponent } from './registrar/registrar.component';
+import { AlertService, AlertModule } from "ngx-alerts";
 
 
 
@@ -32,11 +33,13 @@ import { RegistrarComponent } from './registrar/registrar.component';
         RouterModule,
         CommonModule,
         PAGES_ROUTES,
-        MaterialModule
+        MaterialModule,
+        AlertModule.forRoot({maxMessages:5, timeout:3000}),
     ],
     exports: [
         DashboardComponent,
-        PagesComponent
+        PagesComponent,
+        RegistrarComponent
     ]
 })
 

@@ -1,3 +1,84 @@
-<p>
-  registrar works!
-</p>
+<div class="register">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-offset-7 col-md-offset-7 col-lg-5 col-md-5 col-xs-12 col-sm-12">
+          <div class="wrapper">
+  
+            <div class="wrapper-header">
+              <!-- <img src="assets/img/registrar-logo.jpg" alt="registrar-logo"> -->
+              <div class="header-text">
+                <h3>Registrarse Ahora</h3>
+                <p>Registrar las personas de la empresa</p>
+              </div>
+            </div>
+            <div class="formulario">
+  
+              <form [formGroup]="forma" (ngSubmit)="registrarUsuario()" action="">
+                <p>
+                  <mat-icon>account_box</mat-icon>
+                  <mat-form-field>
+                    <input matInput placeholder="Escriba el nombre" formControlName="nombre" required>
+                    <mat-error *ngIf="forma.controls['nombre'].invalid">{{getErrorNameMessage()}}</mat-error>
+                  </mat-form-field>
+                </p>
+                <p>
+                  <mat-icon>email</mat-icon>
+                  <mat-form-field>
+                    <input matInput placeholder="Enter your email" formControlName="email" required>
+                    <mat-error *ngIf="forma.controls['email'].invalid">{{getErrorEmailMessage()}}</mat-error>
+                  </mat-form-field>
+                </p>
+  
+                <p>
+                  <mat-icon>security</mat-icon>
+                  <mat-form-field>
+                    <input matInput placeholder="Escriba la contraseña" formControlName="password" [type]="hide ? 'password' : 'text'" required>
+                  
+                    <mat-error *ngIf="forma.controls['password'].invalid">La contraseña es necesaria</mat-error>
+                  </mat-form-field>
+  
+                </p>
+  
+                <p>
+                  <mat-icon>security</mat-icon>
+                  <mat-form-field>
+                    <input matInput placeholder="Confirma la contraseña" formControlName="password2" [type]="hide ? 'password' : 'text'" required>
+                    <mat-error *ngIf="forma.errors">Las contraseñas no son iguales </mat-error>
+                  </mat-form-field>
+                  
+  
+                </p>
+                <p *ngIf="forma.errors && !forma.pristine" class="alert alert-danger"> las contra no iguales</p>
+    
+  
+                <p>
+                  <mat-icon>face</mat-icon>
+                  <mat-form-field>
+                    <mat-select placeholder="Selecciona un rol" formControlName="role" required disableRipple>
+                      <mat-option>--</mat-option>
+                      <mat-option value="ADMIN_ROLE">ADMIN_ROLE</mat-option>
+                      <mat-option value="PROFESOR_ROLE">PROFESOR_ROLE</mat-option>
+                      <mat-option value="ALUMNO_ROLE">ALUMNO_ROLE</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="forma.controls['role'].invalid">{{getErrorRoleMessage()}}</mat-error>
+  
+                  </mat-form-field>
+  
+                </p>
+                <div>
+                  <button mat-raised-button type="submit" color="primary" [disabled]="!forma.valid">Loguear</button>
+                </div>
+              </form>
+  
+              <p>Form value {{forma.value | json}}</p>
+              <p>Forma value {{forma.status | json}}</p>
+              <p>Account status {{forma.errors | json}}</p>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ngx-alerts></ngx-alerts>
