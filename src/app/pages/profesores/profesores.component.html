@@ -1,0 +1,46 @@
+<h3>Mantenimiento de los profesores</h3>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <span>  Profesores en el colegio (<small>{{profesoresService.totalProfesores}}</small>)
+            </span>
+              <button mat-raised-button color="primary" class="boton">Crear profesor</button>
+  
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>DNI</th>
+                  <th>direccion</th>
+                  <th>telefono</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let profesor of profesores">
+                  <td>Foto</td>
+                  <td>{{profesor.nombre}}</td>
+                  <td>{{profesor.apellido_paterno}} {{profesor.apellido_materno}}</td>
+                  <td>{{profesor.dni}}</td>
+                  <td>{{profesor.direccion}}</td>
+                  <td>{{profesor.telefono}}</td>
+                  <td>opciones</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

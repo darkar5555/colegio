@@ -11,11 +11,11 @@
   /* align-items: center; */
   justify-content: center;
   width: 200px;
-  background: rgba(255, 0, 0, 0.5);
+  /* background: rgba(255, 0, 0, 0.5); */
 }
-.mat-accordion{
+/* .mat-accordion{
   background: rgba(255, 0, 0, 0.5);
-}
+} */
 .example-header {
   position: fixed;
   top: 0;
@@ -23,18 +23,18 @@
   right: 0;
 }
 
-.mat-expansion-panel-header{
+/* .mat-expansion-panel-header{
   background: rgba(255, 0, 0, 0.5);
-}
+} */
 
-.mat-expansion-panel :hover{
+/* .mat-expansion-panel :hover{
   background: rgba(255, 0, 0, 0.5);
 
-}
-.mat-expansion-panel-body{
+} */
+/* .mat-expansion-panel-body{
   padding: 0px 0px 0px 0px;
   background: rgba(255, 0, 0, 0.5);
-}
+} */
 .example-footer {
   position: fixed;
   bottom: 0;

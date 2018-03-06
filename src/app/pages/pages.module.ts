@@ -16,6 +16,14 @@ import { PagesComponent } from "./pages.component";
 import { PAGES_ROUTES } from "./pages.routes";
 import { RegistrarComponent } from './registrar/registrar.component';
 import { AlertService, AlertModule } from "ngx-alerts";
+import { ProfesoresComponent } from "./profesores/profesores.component";
+import { ProfesorComponent } from "./profesores/profesor.component";
+import { AlumnosComponent } from './alumnos/alumnos.component';
+import { AlumnoComponent } from './alumnos/alumno.component';
+import { ClasesComponent } from './clases/clases.component';
+import { ClaseComponent } from './clases/clase.component';
+import { NotasComponent } from './notas/notas.component';
+import { NotaComponent } from './notas/nota.component';
 
 
 
@@ -24,7 +32,16 @@ import { AlertService, AlertModule } from "ngx-alerts";
     declarations: [
         DashboardComponent,
         PagesComponent,
-        RegistrarComponent
+        RegistrarComponent,
+        ProfesoresComponent,
+        ProfesorComponent,
+        AlumnosComponent,
+        AlumnoComponent,
+        ClasesComponent,
+        ClaseComponent,
+        NotasComponent,
+        NotaComponent
+        
     ],
     imports: [
         BrowserModule,
@@ -39,7 +56,9 @@ import { AlertService, AlertModule } from "ngx-alerts";
     exports: [
         DashboardComponent,
         PagesComponent,
-        RegistrarComponent
+        RegistrarComponent,
+        ProfesorComponent,
+        ProfesoresComponent
     ]
 })
 

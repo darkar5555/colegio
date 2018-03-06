@@ -1,70 +1,88 @@
 <mat-toolbar color="primary" class="example-toolbar">
-        <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-        <h1 class="example-app-name">Chirvinsu Colegio</h1>
-      </mat-toolbar>
-    
+  <button mat-icon-button (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1 class="example-app-name">Chirvinsu Colegio</h1>
+</mat-toolbar>
 
-  <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav mode="side" opened="true"
-     fixedTopGap="0"
-    fixedBottomGap="0"
-    class="example-sidenav">
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened="true" fixedTopGap="0" fixedBottomGap="0" class="example-sidenav">
     <mat-nav-list>
-            <a mat-list-item routerLink="registrar">Registrar usuario</a>
-            <a mat-list-item routerLink="dashboard">Dashboard</a>
-            
+      <a mat-list-item routerLink="registrar">Registrar usuario</a>
+      <a mat-list-item routerLink="dashboard">Dashboard</a>
+      <a mat-list-item routerLink="profesores">Profesores</a>
+      <a mat-list-item routerLink="alumnos">Alumnos</a>
 
-            <mat-accordion mat-list-item>
-                    <mat-expansion-panel>
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Personal data
-                        </mat-panel-title>
-                      </mat-expansion-panel-header>
-                      <mat-list>
-                            <mat-list-item>
-                                    <a routerLink="registrar">Profesores</a>
-                            </mat-list-item>
-                            <mat-divider></mat-divider>
-                            <mat-list-item>
-                                <a routerLink="dashboard">Alumnos</a>
-                            </mat-list-item>
-                            <mat-divider></mat-divider>
-                            <mat-list-item>
-                                <a routerLink="registrar">Colegio</a>
-                            </mat-list-item>
-                          
-                      
-                  
-                    </mat-list>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel (opened)="panelOpenState = true"
-                                         (closed)="panelOpenState = false">
-                      <mat-expansion-panel-header>
-                        <mat-panel-title>
-                          Segundo
-                        </mat-panel-title>
-                        
-                      </mat-expansion-panel-header>
-                      <p>Correo</p>
-                    </mat-expansion-panel>
-                  </mat-accordion>
+      <mat-accordion mat-list-item>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Clases
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list>
+            <mat-list-item>
+              <a routerLink="clase/18-1">Primero</a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <a routerLink="clase/18-2">Segundo</a>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item>
+              <a routerLink="clase/18-3">Tercero</a>
+            </mat-list-item>
 
-                  <a mat-list-item (click)="this.usuarioService.logOut()">
-                        <mat-icon>power_settings_new</mat-icon>
-                        Logout
-                    </a>
+
+
+          </mat-list>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Notas
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list>
+            <mat-list-item>
+              <a routerLink="clase/18-1">Primero</a>
+            </mat-list-item>
+            <!-- <mat-divider></mat-divider> -->
+            <mat-list-item>
+              <a routerLink="clase/18-2">Segundo</a>
+            </mat-list-item>
+            <!-- <mat-divider></mat-divider> -->
+            <mat-list-item>
+              <a routerLink="clase/18-3">Tercero</a>
+            </mat-list-item>
+            <mat-list-item>
+              <a routerLink="clase/18-3">Cuarto</a>
+            </mat-list-item>
+            <mat-list-item>
+              <a routerLink="clase/18-3">Quinto</a>
+            </mat-list-item>
+
+
+          </mat-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <a mat-list-item (click)="this.usuarioService.logOut()">
+        <mat-icon>power_settings_new</mat-icon>
+        Logout
+      </a>
 
     </mat-nav-list>
-    </mat-sidenav>
+  </mat-sidenav>
 
 
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
-  <mat-toolbar class="example-footer">Footer</mat-toolbar>
+<mat-toolbar class="example-footer">Footer</mat-toolbar>
 
 
 

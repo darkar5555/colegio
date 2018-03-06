@@ -1,0 +1,46 @@
+<h3>Mantenimiento de los alumnos</h3>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <span>  Alumnos en el colegio (<small>{{alumnoService.totalAlumnos}}</small>)
+            </span>
+              <button mat-raised-button color="primary" class="boton">Crear Alumno</button>
+  
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>direccion</th>
+                  <th>telefono</th>
+                  <th>colegio</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let alumno of alumnos">
+                  <td>Foto</td>
+                  <td>{{alumno.nombre}}</td>
+                  <td>{{alumno.apellido_paterno}} {{alumno.apellido_materno}}</td>
+                  <td>{{alumno.direccion}}</td>
+                  <td>{{alumno.telefono}}</td>
+                  <td>{{alumno.usuario.email}}</td>
+                  <td>opciones</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
