@@ -1,3 +1,50 @@
-<p>
-  notas works!
-</p>
+<h3>Las notas de todos los alumnos</h3>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <span>  Notas de los alumnos (<small>20</small>)
+            </span>
+              <button mat-raised-button color="primary" class="boton">Crear nota</button>
+  
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Foto</th>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>Materia</th>
+                  <th>Permanente 1</th>
+                  <th>Parcial</th>
+                  <th>Permanente 2</th>
+                  <th>Final</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let nota of notas">
+                  <td>Foto</td>
+                  <td>{{nota.alumno.nombre}}</td>
+                  <td>{{nota.alumno.apellido_paterno}} {{nota.alumno.apellido_materno}}</td>
+                  <td>{{nota.materia.nombre}}</td>
+                  <td>{{nota.permanente1}}</td>
+                  <td>{{nota.parcial}}</td>
+                  <td>{{nota.permanente2}}</td>
+                  <td>{{nota.final}}</td>
+                  <td>opciones</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

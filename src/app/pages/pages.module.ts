@@ -24,6 +24,13 @@ import { ClasesComponent } from './clases/clases.component';
 import { ClaseComponent } from './clases/clase.component';
 import { NotasComponent } from './notas/notas.component';
 import { NotaComponent } from './notas/nota.component';
+import { PrimeroComponent } from './clases/primero/primero.component';
+import { SegundoComponent } from './clases/segundo/segundo.component';
+import { TerceroComponent } from './clases/tercero/tercero.component';
+import { CuartoComponent } from './clases/cuarto/cuarto.component';
+import { QuintoComponent } from './clases/quinto/quinto.component';
+import { SextoComponent } from './clases/sexto/sexto.component';
+import { MateriasComponent } from './materias/materias.component';
 
 
 
@@ -40,7 +47,14 @@ import { NotaComponent } from './notas/nota.component';
         ClasesComponent,
         ClaseComponent,
         NotasComponent,
-        NotaComponent
+        NotaComponent,
+        PrimeroComponent,
+        SegundoComponent,
+        TerceroComponent,
+        CuartoComponent,
+        QuintoComponent,
+        SextoComponent,
+        MateriasComponent
         
     ],
     imports: [

@@ -9,7 +9,9 @@ import {
     LoginGuardGuard,
     ProfesoresService,
     AlumnoService,
-    ClasesService
+    ClasesService,
+    NotasService,
+    MateriaService
 } from './service.index';
 
 
@@ -27,7 +29,9 @@ import {
         LoginGuardGuard,
         ProfesoresService,
         AlumnoService,
-        ClasesService
+        ClasesService,
+        NotasService,
+        MateriaService
     ],
     declarations:[]
 })

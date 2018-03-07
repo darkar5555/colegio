@@ -1,0 +1,41 @@
+<h3>Mantenimiento de las materias enseñadas</h3>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <span>  Todas las materias  (<small>{{materiaService.totalMaterias}}</small>)
+               con el profesor {{codigo}}
+            </span> 
+              <button mat-raised-button color="primary" class="boton">Añadir una materia</button>
+  
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  
+                  <th>Nombre</th>
+                  
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let materia of materias">
+            
+                  <td>{{materia.nombre}}</td>
+                 
+                  <td>opciones</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

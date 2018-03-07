@@ -10,6 +10,14 @@ import { ProfesorComponent } from './profesores/profesor.component';
 import { AlumnoComponent } from './alumnos/alumno.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { ClasesComponent } from './clases/clases.component';
+import { PrimeroComponent } from './clases/primero/primero.component';
+import { SegundoComponent } from './clases/segundo/segundo.component';
+import { TerceroComponent } from './clases/tercero/tercero.component';
+import { CuartoComponent } from './clases/cuarto/cuarto.component';
+import { QuintoComponent } from './clases/quinto/quinto.component';
+import { SextoComponent } from './clases/sexto/sexto.component';
+import { NotasComponent } from './notas/notas.component';
+import { MateriasComponent } from './materias/materias.component';
 
 
 
@@ -25,7 +33,15 @@ const pagesRoutes: Routes = [
         { path: 'profesores',             component: ProfesoresComponent},
         { path: 'profesor/:id',           component: ProfesorComponent},
         { path: 'alumnos',                component: AlumnosComponent},
-        { path: 'clase/:codigo',         component: ClasesComponent},
+        { path: 'clase/:codigo',          component: ClasesComponent},
+        { path: 'primero/:codigo',        component: PrimeroComponent},
+        { path: 'segundo/:codigo',        component: SegundoComponent},
+        { path: 'tercero/:codigo',        component: TerceroComponent},
+        { path: 'cuarto/:codigo',         component: CuartoComponent},
+        { path: 'quinto/:codigo',         component: QuintoComponent},
+        { path: 'sexto/:codigo',          component: SextoComponent},
+        { path: 'notas',                  component: NotasComponent},
+        { path: 'materias',               component: MateriasComponent},
         // { path: 'home',                 component: HomeComponent},
         { path: '',         redirectTo:'/pages/dashboard', pathMatch: 'full' },
 

@@ -8,6 +8,6 @@ export class Alumno {
         public telefono: number,
         public usuario: string,
         public colegio: string,
-        public _id: string
+        public _id?: string
     ){}
 }

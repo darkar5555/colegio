@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NotasService } from '../../services/service.index';
+import { Nota } from '../../models/nota.model';
 
 @Component({
   selector: 'app-notas',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotasComponent implements OnInit {
 
-  constructor() { }
+  notas : Nota[] = [];
+
+  constructor( private notasService: NotasService) { }
 
   ngOnInit() {
+    this.cargarNotasTodos();
   }
+
+  cargarNotasTodos(){
+    this.notasService.cargarNotas()
+            .subscribe(notas=>{
+              this.notas = notas;
+              console.log(this.notas);
+              console.log('algo paso aqui');
+            });
+  };
+
 
 }

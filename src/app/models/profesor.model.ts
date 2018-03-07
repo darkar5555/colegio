@@ -9,7 +9,7 @@ export class Profesor {
         public telefono: number,
         public usuario: string,
         public colegio: string,
-        public _id: string
+        public _id?: string
 
     ){}
 }
