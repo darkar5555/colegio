@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from '../../models/profesor.model';
+import { Profesor } from '../../models/profesor.model';
 import { HttpClient } from '@angular/common/http';
 import { URL_SERVICIOS } from '../../config/config';
 
@@ -30,7 +30,7 @@ export class ProfesorService {
     let url = URL_SERVICIOS + '/profesor';
      return this.http.post(url, profesor)
             .map((resp:any)=>{
-              this.alertService.success('Profesor creado con el email ' +usuario.email +' y su nombre ' + usuario.nombre);
+              this.alertService.success('Profesor creado con el direccion ' +profesor.direccion +' y su nombre ' + profesor.nombre);
               return resp.profesor;
             });
   };

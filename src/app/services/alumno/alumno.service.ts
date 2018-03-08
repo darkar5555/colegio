@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from '../../models/alumno.model';
+import { Alumno } from '../../models/alumno.model';
 import { HttpClient } from '@angular/common/http';
 import { URL_SERVICIOS } from '../../config/config';
 
@@ -7,6 +7,7 @@ import { URL_SERVICIOS } from '../../config/config';
 import 'rxjs/add/operator/map';
 import { AlertService } from 'ngx-alerts';
 import { Router } from '@angular/router';
+
 
 @Injectable()
 export class AlumnoService {
@@ -30,7 +31,7 @@ export class AlumnoService {
     let url = URL_SERVICIOS + '/alumno';
      return this.http.post(url, alumno)
             .map((resp:any)=>{
-              this.alertService.success('Profesor creado con el email ' +usuario.email +' y su nombre ' + usuario.nombre);
+              this.alertService.success('Alumno creado con la direccion  ' +alumno.direccion +' y su nombre ' + alumno.nombre);
               return resp.alumno;
             });
   };

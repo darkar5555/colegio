@@ -19,7 +19,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 
 
 //carousel ui
-import { UICarouselModule } from "ui-carousel";
+
 import { WEB_ROUTES } from './web.routes';
 import { ShareModule } from '../shared/shared.module';
 
@@ -40,7 +40,6 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     BrowserModule,
     CommonModule,
     MaterialModule,
-    UICarouselModule,
     WEB_ROUTES,
     ShareModule,
     CarouselModule.forRoot()
