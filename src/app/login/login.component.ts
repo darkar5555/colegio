@@ -46,6 +46,7 @@ export class LoginComponent implements OnInit {
     );
     this.usuarioService.login(usuario)
           .subscribe(correcto=> this.router.navigate(['/pages']));
+          
   };
 
   // ingresar(){
