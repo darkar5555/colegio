@@ -34,7 +34,7 @@
                   <th>DNI</th>
                   <th>direccion</th>
                   <th>telefono</th>
-                  <th></th>
+                  <th>Opciones</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,7 +45,9 @@
                   <td>{{profesor.dni}}</td>
                   <td>{{profesor.direccion}}</td>
                   <td>{{profesor.telefono}}</td>
-                  <td>opciones</td>
+                  <td><button mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+                    <button (click)="borrarProfesor(profesor)" mat-raised-button color="warn"><mat-icon>delete</mat-icon></button>
+                  </td>
                 </tr>
               </tbody>
             </table>

@@ -15,7 +15,7 @@ import { PagesComponent } from "./pages.component";
 
 import { PAGES_ROUTES } from "./pages.routes";
 import { RegistrarComponent } from './registrar/registrar.component';
-import { AlertService, AlertModule } from "ngx-alerts";
+import { AlertModule } from "ngx-alerts";
 import { ProfesoresComponent } from "./profesores/profesores.component";
 import { ProfesorComponent } from "./profesores/profesor.component";
 import { AlumnosComponent } from './alumnos/alumnos.component';
@@ -31,6 +31,7 @@ import { CuartoComponent } from './clases/cuarto/cuarto.component';
 import { QuintoComponent } from './clases/quinto/quinto.component';
 import { SextoComponent } from './clases/sexto/sexto.component';
 import { MateriasComponent } from './materias/materias.component';
+
 
 
 
