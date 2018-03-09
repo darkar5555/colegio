@@ -33,8 +33,8 @@
                   <th>Apellidos</th>
                   <th>direccion</th>
                   <th>telefono</th>
-                  <th>colegio</th>
-                  <th></th>
+                  <th>email</th>
+                  <th>Opciones</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,7 +45,10 @@
                   <td>{{alumno.direccion}}</td>
                   <td>{{alumno.telefono}}</td>
                   <td>{{alumno.usuario.email}}</td>
-                  <td>opciones</td>
+                  <td>
+                      <button mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+                      <button (click)="borrarProfesor(profesor)" mat-raised-button color="warn"><mat-icon>delete</mat-icon></button>
+                  </td>
                 </tr>
               </tbody>
             </table>

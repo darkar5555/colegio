@@ -4,12 +4,11 @@ import { URL_SERVICIOS } from '../../config/config';
 
 import 'rxjs/add/operator/map';
 import { AlertService } from 'ngx-alerts';
-import { UsuarioService } from '../service.index';
+import { UsuarioService } from '../usuario/usuario.service';
 @Injectable()
 export class ProfesoresService {
 
   totalProfesores : Number = 0;
-
   constructor( private http: HttpClient, private usuarioService: UsuarioService, 
                 public alertService: AlertService) { }
 
@@ -43,6 +42,13 @@ export class ProfesoresService {
                 this.alertService.success('Usuario creado con el email ' +' y su nombre ');
                 return true;
               });
+  }
+
+  obtenerProfesor(id: string){
+
+    let url = URL_SERVICIOS + '/profesor/' + id;
+    return this.http.get(url)
+                .map((resp:any)=>resp.profesor);
   }
 
 }

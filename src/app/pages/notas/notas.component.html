@@ -25,7 +25,7 @@
                   <th>Parcial</th>
                   <th>Permanente 2</th>
                   <th>Final</th>
-                  <th></th>
+                  <th>Opciones</th>
                 </tr>
               </thead>
               <tbody>
@@ -38,7 +38,10 @@
                   <td>{{nota.parcial}}</td>
                   <td>{{nota.permanente2}}</td>
                   <td>{{nota.final}}</td>
-                  <td>opciones</td>
+                  <td>
+                      <td><button mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+                        <button (click)="borrarProfesor(profesor)" mat-raised-button color="warn"><mat-icon>delete</mat-icon></button>
+                  </td>
                 </tr>
               </tbody>
             </table>

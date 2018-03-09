@@ -43,7 +43,7 @@ export class ProfesoresComponent implements OnInit {
     console.log(profesor);
     let idprofesor:any = profesor.usuario;
     if (idprofesor._id === this.usuarioService.usuario._id) {
-      this.alertService.success('No puede borrarse a si mismo');
+      // this.alertService.success('No puede borrarse a si mismo');
       console.log('no se pudo borrar');
       return;
     }
@@ -51,7 +51,7 @@ export class ProfesoresComponent implements OnInit {
     this.profesoresService.borrarProfesor(profesor._id)
                   .subscribe(borrado=>{
                     console.log(borrado);
-                    this.alertService.success('El profesor fue eliminado correctamente');
+                    // this.alertService.success('El profesor fue eliminado correctamente');
                     this.cargarProfesores();
                   });
   }
