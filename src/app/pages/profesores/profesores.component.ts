@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfesoresService } from '../../services/service.index';
 import { Profesor } from '../../models/profesor.model';
+import { URL_SERVICIOS } from '../../config/config';
 
 @Component({
   selector: 'app-profesores',
@@ -23,4 +24,15 @@ export class ProfesoresComponent implements OnInit {
             });
   }
 
+  buscarProfesores(termino:string){
+    if (termino.length <= 0) {
+      this.cargarProfesores();
+      return;
+    }
+
+    this.profesoresService.buscarProfesor(termino)
+                      .subscribe((profesores: Profesor[])=>{
+                        this.profesores = profesores;
+                      });
+  }
 }

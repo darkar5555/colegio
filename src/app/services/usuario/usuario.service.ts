@@ -71,7 +71,7 @@ export class UsuarioService {
   }
 
   crearUsuario( usuario: Usuario ){
-    let url = URL_SERVICIOS + '/usuario';
+    let url = URL_SERVICIOS + '/usuario?token=' + this.token;
      return this.http.post(url, usuario)
             .map((resp:any)=>{
               this.alertService.success('Usuario creado con el email ' +usuario.email +' y su nombre ' + usuario.nombre);

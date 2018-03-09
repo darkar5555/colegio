@@ -21,4 +21,13 @@ export class ProfesoresService {
             });
   };
 
+  buscarProfesor(termino: string){
+    
+    console.log(termino);
+    let url = URL_SERVICIOS + '/busqueda/coleccion/profesores/' + termino;
+    return this.http.get(url)
+            .map((resp:any)=> resp.profesores);
+
+  }
+
 }

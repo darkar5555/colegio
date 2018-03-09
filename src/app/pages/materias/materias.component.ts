@@ -24,4 +24,16 @@ export class MateriasComponent implements OnInit {
               });
   };
 
+  buscarMaterias(termino: string){
+    if (termino.length <= 0) {
+      this.cargarMaterias();
+      return;
+    }
+
+    this.materiaService.buscarMateria(termino)
+                .subscribe((materias: Materia[])=>{
+                  this.materias = materias;
+                });
+  }
+
 }

@@ -1,4 +1,15 @@
 <h3>Mantenimiento de los alumnos</h3>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <mat-card>
+        <mat-form-field class="example-full-width">
+          <input #input (keyup)="buscarAlumnos(input.value)" matInput placeholder="Buscar alumnos....">
+        </mat-form-field>
+      </mat-card>
+    </div>
+  </div>
+</div>
 
 <div class="container-fluid">
   <div class="row">

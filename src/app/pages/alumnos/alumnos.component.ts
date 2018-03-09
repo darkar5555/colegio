@@ -25,4 +25,17 @@ export class AlumnosComponent implements OnInit {
             });
   }
 
+  buscarAlumnos(termino: string){
+    if (termino.length <= 0 ) {
+      this.cargarAlumnos();
+      return;
+    }
+
+    this.alumnoService.buscarAlumno(termino)
+              .subscribe((alumnos: Alumno[])=>{
+                console.log(alumnos);
+                this.alumnos = alumnos;
+              });
+
+  }
 }

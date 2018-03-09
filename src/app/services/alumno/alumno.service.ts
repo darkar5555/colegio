@@ -20,4 +20,10 @@ export class AlumnoService {
           });
   }
 
+  buscarAlumno(termino: string){
+    let url = URL_SERVICIOS + '/busqueda/coleccion/alumnos/' + termino;
+    return this.http.get(url)
+              .map((resp:any)=>resp.alumnos);
+  }
+
 }

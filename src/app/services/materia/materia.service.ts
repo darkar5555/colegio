@@ -18,4 +18,11 @@ export class MateriaService {
                 return resp.materias;
               });
   };
+
+  buscarMateria(termino: string){
+    let url = URL_SERVICIOS + '/busqueda/coleccion/materias/' + termino;
+
+    return this.http.get(url)
+              .map((resp:any)=> resp.materias);
+  }
 }
