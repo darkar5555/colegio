@@ -19,7 +19,7 @@
           <mat-card-title>
             <span>  Profesores en el colegio (<small>{{profesoresService.totalProfesores}}</small>)
             </span>
-              <button mat-raised-button color="primary" class="boton">Crear profesor</button>
+              <button [routerLink]="['/pages/profesor', 'nuevo']" mat-raised-button color="primary" class="boton">Crear profesor</button>
   
           </mat-card-title>
         </mat-card-header>
@@ -45,7 +45,7 @@
                   <td>{{profesor.dni}}</td>
                   <td>{{profesor.direccion}}</td>
                   <td>{{profesor.telefono}}</td>
-                  <td><button mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+                  <td><button [routerLink]="['/pages/profesor', profesor._id]" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
                     <button (click)="borrarProfesor(profesor)" mat-raised-button color="warn"><mat-icon>delete</mat-icon></button>
                   </td>
                 </tr>
