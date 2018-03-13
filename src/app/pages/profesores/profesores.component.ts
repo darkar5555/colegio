@@ -3,6 +3,7 @@ import { ProfesoresService, UsuarioService } from '../../services/service.index'
 import { Profesor } from '../../models/profesor.model';
 import { URL_SERVICIOS } from '../../config/config';
 import { AlertService } from 'ngx-alerts';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
 @Component({
@@ -13,12 +14,21 @@ import { AlertService } from 'ngx-alerts';
 export class ProfesoresComponent implements OnInit {
 
   profesores: Profesor[] = [];
+  forma : FormGroup;
+  // profesor: Profesor = new Profesor();
   constructor( private profesoresService: ProfesoresService, private usuarioService:
-                  UsuarioService, public alertService: AlertService) { }
+                  UsuarioService, public alertService: AlertService,
+                ) { }
 
   ngOnInit() {
     this.cargarProfesores();
+    
+
   }
+
+  
+
+  
 
   cargarProfesores(){
     this.profesoresService.cargarProfesores()
@@ -55,4 +65,8 @@ export class ProfesoresComponent implements OnInit {
                     this.cargarProfesores();
                   });
   }
+
+  // guardarProfesor(profesor: Profesor){
+  //   this.profesoresService.guardarProfesor(profesor)
+  // }
 }

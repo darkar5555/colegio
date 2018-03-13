@@ -1,3 +1,120 @@
-<p>
-  alumno works!
-</p>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <div class="row">
+              <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
+                <div class="wrapper">
+  
+                  <div class="wrapper-header">
+                    <!-- <img src="assets/img/registrar-logo.jpg" alt="registrar-logo"> -->
+                    <div class="header-text">
+                      <h3>Registrarse un Profesor</h3>
+                      <p>Registrar las personas de la empresa</p>
+                    </div>
+                  </div>
+                  <mat-card>
+                  <div class="formulario">
+  
+                    <form [formGroup]="forma" (ngSubmit)="guardarAlumno()" action="">
+                      <p>
+                        <mat-icon>account_box</mat-icon>
+                        <mat-form-field>
+                          <input [(ngModel)]="this.alumno.nombre" matInput placeholder="Escriba el nombre" formControlName="nombre" required>
+                          <mat-error *ngIf="forma.controls['nombre'].invalid">{{getErrorNameMessage()}}</mat-error>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-icon>account_box</mat-icon>
+                        <mat-form-field>
+                          <input [(ngModel)]="this.alumno.apellido_paterno" matInput placeholder="Apellido Paterno" formControlName="apellido_paterno" required>
+                          <mat-error *ngIf="forma.controls['apellido_paterno'].invalid">{{getErrorApellidoPaMessage()}}</mat-error>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                          <mat-icon>account_box</mat-icon>
+                          <mat-form-field>
+                            <input [(ngModel)]="this.alumno.apellido_materno"  matInput placeholder="Apellido Materno" formControlName="apellido_materno" required>
+                            <mat-error *ngIf="forma.controls['apellido_materno'].invalid">{{getErrorApellidoMaMessage()}}</mat-error>
+                          </mat-form-field>
+                      </p>
+                      <p>
+                          <mat-icon>account_box</mat-icon>
+                          <mat-form-field>
+                            <input [(ngModel)]="this.alumno.direccion"  matInput placeholder="Ingre la direccion" formControlName="direccion" required>
+                            <mat-error *ngIf="forma.controls['direccion'].invalid">{{getErrorDireccionMessage()}}</mat-error>
+                          </mat-form-field>
+                      </p>
+
+                      <p>
+                          <mat-icon>account_box</mat-icon>
+                          <mat-form-field>
+                            <input [(ngModel)]="this.alumno.telefono"  matInput placeholder="Ingrese el telefono" formControlName="telefono" required>
+                            <mat-error *ngIf="forma.controls['telefono'].invalid">{{getErrorTelefonoMessage()}}</mat-error>
+                          </mat-form-field>
+                      </p>
+  
+                      <p>
+                        <mat-icon>face</mat-icon>
+                        <mat-form-field>
+                          <mat-select (change)="cambioUsuario($event.value)" placeholder="Selecciona un usuario" formControlName="usuario" required disableRipple>
+                            <mat-option>--</mat-option>
+                            <mat-option *ngFor="let usuario of usuarios" [value]="usuario._id">{{usuario.nombre}}</mat-option>
+                            
+                          </mat-select>
+                          <mat-error *ngIf="forma.controls['usuario'].invalid">{{getErrorUsuarioMessage()}}</mat-error>
+  
+                        </mat-form-field>
+                      </p>
+                      <p>
+                          <mat-icon>school</mat-icon>
+                          <mat-form-field>
+                              <mat-select (change)="cambioColegio($event.value)" placeholder="Selecciona su colegio" formControlName="colegio" required disableRipple>
+                                  <mat-option>--</mat-option>
+                                  <mat-option *ngFor="let colegio of colegios" [value]="colegio._id">{{colegio.nombre}}</mat-option>
+                                  
+                                </mat-select>
+                          </mat-form-field>
+                      </p>
+                      <div>
+                        <button mat-raised-button type="submit" color="primary" [disabled]="!forma.valid">Loguear</button>
+                      </div>
+                    </form>
+  
+                    <p>Form value {{forma.value | json}}</p>
+                    <p>Forma value {{forma.status | json}}</p>
+                    <p>Accoasdasunt status {{forma.errors | json}}</p>
+  
+                  </div>
+                  </mat-card>
+                </div>
+              </div>
+
+              
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                  <mat-card>
+                <h3>Usuario</h3>
+                <p>Nombre: {{usuario.nombre}}</p>
+                <p>Email: {{usuario.email}}</p>
+                <p>Rol: {{usuario.role}}</p>
+              </mat-card>
+              </div>
+            
+            
+              <div class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+                <mat-card>
+                <h3>Colegio</h3>
+                <p>Nombre: {{colegio.nombre}} </p>
+                <p>Direccion: {{colegio.direccion}}</p>
+                <p>Director: {{colegio.director}}</p>
+                <p>Subdirector: {{colegio.subdirector}} </p>
+              </mat-card>
+              </div>
+            
+          </div>
+       
+  
+      </div>
+    </div>
+  </div>
+
+<ngx-alerts></ngx-alerts>

@@ -1,3 +1,5 @@
+
+
 //Guards de la aplicacion
 export { LoginGuardGuard } from "./guards/login-guard.guard";
 
@@ -9,3 +11,4 @@ export { AlumnoService } from "./alumno/alumno.service";
 export { ClasesService } from "./clases/clases.service";
 export { NotasService } from "./nota/notas.service";
 export { MateriaService } from "./materia/materia.service";
+export { ColegioService } from "./colegio/colegio.service";

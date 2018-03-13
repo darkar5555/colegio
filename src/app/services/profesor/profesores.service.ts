@@ -40,17 +40,17 @@ export class ProfesoresService {
     
     return this.http.delete(url)
               .map((resp:any)=>{
-                this.alertService.success('Usuario creado con el email ' +' y su nombre ');
+                this.alertService.success('Profesor borrado');
                 return true;
               });
   }
 
-  crearProfesor(profesor: Profesor){
+  guardarProfesor(profesor: Profesor){
     let url = URL_SERVICIOS + '/profesor?token=' + this.usuarioService.token;
     return this.http.post(url, profesor)
                   .map((resp:any)=>{
                     this.alertService.success(
-                      "Profesor creado con el nombre " + profesor.nombre  + profesor.apellido_paterno
+                      "Profesor creado con el nombre " + profesor.nombre + " "+ profesor.apellido_paterno
                     );
                     return resp.profesor;
                   });

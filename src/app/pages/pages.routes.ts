@@ -33,6 +33,7 @@ const pagesRoutes: Routes = [
         { path: 'profesores',             component: ProfesoresComponent},
         { path: 'profesor/:id',           component: ProfesorComponent},
         { path: 'alumnos',                component: AlumnosComponent},
+        { path: 'alumno/:id',             component: AlumnoComponent},
         { path: 'clase/:codigo',          component: ClasesComponent},
         { path: 'primero/:codigo',        component: PrimeroComponent},
         { path: 'segundo/:codigo',        component: SegundoComponent},

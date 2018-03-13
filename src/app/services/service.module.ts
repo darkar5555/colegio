@@ -11,7 +11,8 @@ import {
     AlumnoService,
     ClasesService,
     NotasService,
-    MateriaService
+    MateriaService,
+    ColegioService
 } from './service.index';
 
 
@@ -31,7 +32,8 @@ import {
         AlumnoService,
         ClasesService,
         NotasService,
-        MateriaService
+        MateriaService,
+        ColegioService
     ],
     declarations:[]
 })

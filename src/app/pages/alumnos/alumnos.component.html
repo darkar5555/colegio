@@ -19,7 +19,7 @@
           <mat-card-title>
             <span>  Alumnos en el colegio (<small>{{alumnoService.totalAlumnos}}</small>)
             </span>
-              <button mat-raised-button color="primary" class="boton">Crear Alumno</button>
+              <button [routerLink]="['/pages/alumno', 'nuevo']" mat-raised-button color="primary" class="boton">Crear Alumno</button>
   
           </mat-card-title>
         </mat-card-header>
@@ -46,8 +46,8 @@
                   <td>{{alumno.telefono}}</td>
                   <td>{{alumno.usuario.email}}</td>
                   <td>
-                      <button mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
-                      <button (click)="borrarProfesor(profesor)" mat-raised-button color="warn"><mat-icon>delete</mat-icon></button>
+                      <button [routerLink]="['/pages/alumno', alumno._id]" mat-raised-button color="primary"><mat-icon>save</mat-icon></button>
+                      <button (click)="borrarAlumno(alumno)" mat-raised-button color="warn"><mat-icon>delete</mat-icon></button>
                   </td>
                 </tr>
               </tbody>
@@ -58,3 +58,5 @@
     </div>
   </div>
 </div>
+
+<ngx-alerts></ngx-alerts>

@@ -94,4 +94,10 @@ export class UsuarioService {
       return resp.usuarios;
     });
   }
+
+  cargarUsuario(id : string){
+    let url = URL_SERVICIOS + "/usuario/" + id;
+    return this.http.get(url)
+            .map((resp: any)=> resp.usuario);
+  }
 }
